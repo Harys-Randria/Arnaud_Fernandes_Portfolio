@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: 'Arnaud Fernandes | Technical Lead Fullstack & Architecte Microservices',
   description: 'Portfolio professionnel - Expert .NET 8, React, Azure, Kubernetes et architecture microservices.',
   icons: {
-    icon: '/icon.svg',
+    icon: '/arnaud_fernandes.jpg',
   },
 }
 
