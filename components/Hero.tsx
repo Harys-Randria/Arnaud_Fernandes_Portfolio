@@ -10,7 +10,7 @@ export function Hero() {
   const { personalInfo, about } = portfolioData
 
   const highlights = [
-    { icon: Code2, text: '10+ microservices' },
+    { icon: Code2, text: '+50 Projets Livrés' },
     { icon: Award, text: 'Architecture cloud' },
     { icon: Users, text: 'Coaching onshore/offshore' },
   ]

@@ -8,7 +8,7 @@ export function About() {
   const { about } = portfolioData
 
   const stats = [
-    { value: '10+', label: 'Microservices', icon: Zap },
+    { value: '+50', label: 'Projets Livrés', icon: Zap },
     { value: '5+', label: 'Domaines applicatifs', icon: Target },
     { value: '8+', label: 'Années XP', icon: Rocket },
   ]
