@@ -1,13 +1,14 @@
 export const portfolioData = {
   personalInfo: {
-    name: "Arnaud Fernandes",
+    name: "Arnaud Fernandés",
     title: "Leader Technique Fullstack",
     subtitle: "Architecture microservices · .NET 8 · Go · Node.js",
     email: "arnaud.fernandes@tech-magister.com",
     phone: "+33 9 72 66 31 88",
     location: "France",
-    website: "https://arnaudfernandes.com",
+    website: "https://www.tech-magister.com/",
     calendlyUrl: "https://cal.com/arnaudfernandes",
+    avatar: "/arnaud_fernandes.jpg", 
   },
 
   about: {
@@ -33,7 +34,6 @@ export const portfolioData = {
           ".NET 4.8",
           "Node.js",
           "Go",
-          "Java (Spring Boot)",
         ],
       },
       {
@@ -42,7 +42,6 @@ export const portfolioData = {
           "ReactJS",
           "TypeScript",
           "WebAssembly (WASM)",
-          "React Native",
           "React Admin",
         ],
       },
@@ -271,7 +270,7 @@ export const portfolioData = {
     },
     {
       name: "Site web",
-      url: "https://arnaudfernandes.com",
+      url: "https://www.tech-magister.com/",
       icon: "Globe",
     },
     {
@@ -284,7 +283,7 @@ export const portfolioData = {
   contact: {
     title: "Me Contacter",
     subtitle:
-      "Disponible pour des missions freelance ou des opportunités en CDI. Prenez un créneau ou envoyez-moi un message.",
+      "Disponible pour des missions freelance. Prenez un créneau ou envoyez-moi un message.",
     email: "arnaud.fernandes@tech-magister.com",
     phone: "+33 9 72 66 31 88",
   },

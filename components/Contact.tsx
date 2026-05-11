@@ -35,7 +35,7 @@ export function Contact() {
     },
     {
       name: "Site web",
-      url: "https://arnaudfernandes.com",
+      url: "https://www.tech-magister.com/",
       icon: "/website.png",
       description: "Portfolio personnel"
     }
@@ -77,8 +77,7 @@ export function Contact() {
               <div className="relative">
                 <h3 className="text-2xl lg:text-3xl font-semibold mb-4">Prêt à discuter ?</h3>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  Je suis ouvert aux opportunités en CDI (Tech Lead / Architecte) 
-                  ainsi qu'aux missions freelance à forte valeur ajoutée.
+                  Je suis ouvert aux opportunités freelance à forte valeur ajoutée.
                 </p>
 
                 {/* Calendly Button */}

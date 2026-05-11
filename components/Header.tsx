@@ -3,9 +3,10 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Calendar, Menu } from 'lucide-react'
+import { Calendar, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { portfolioData } from '@/lib/data'
+import Image from 'next/image'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,6 +18,8 @@ export function Header() {
     { label: 'Contact', href: '#contact' },
   ]
 
+  const closeMenu = () => setIsMenuOpen(false)
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -25,23 +28,33 @@ export function Header() {
       className="fixed top-0 left-0 right-0 z-50 
                  bg-background/80 backdrop-blur-xl border-b border-border"
     >
-      <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div className="container-portfolio py-4 flex items-center justify-between">
         
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-orange-500 flex items-center justify-center">
-            <span className="text-white font-bold text-xl tracking-tighter">AF</span>
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-hover flex items-center justify-center overflow-hidden">
+            {portfolioData.personalInfo.avatar ? (
+              <Image
+                src={portfolioData.personalInfo.avatar}
+                alt="Arnaud Fernandés"
+                width={40}
+                height={40}
+                className="object-cover w-full h-full"
+              />
+            ) : (
+              <span className="text-white font-bold text-lg">AF</span>
+            )}
           </div>
           <div>
-            <span className="font-semibold text-xl tracking-tight text-foreground group-hover:text-primary transition-colors">
-              Arnaud Fernandes
+            <span className="font-semibold text-lg md:text-xl tracking-tight text-foreground group-hover:text-primary transition-colors">
+              Arnaud Fernandés
             </span>
-            <p className="text-[10px] text-muted-foreground -mt-1">Technical Lead</p>
+            <p className="text-[10px] text-muted-foreground -mt-0.5">Technical Lead Fullstack</p>
           </div>
         </Link>
 
         {/* Navigation Desktop */}
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item, i) => (
             <motion.a
               key={item.href}
@@ -60,6 +73,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <Button
             asChild
+            size="sm"
             className="hidden md:flex items-center gap-2 bg-primary hover:bg-primary-hover text-primary-foreground font-medium shadow-lg shadow-primary/20"
           >
             <a href={portfolioData.personalInfo.calendlyUrl} target="_blank" rel="noopener noreferrer">
@@ -71,10 +85,10 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
             aria-label="Menu"
           >
-            <Menu className="w-6 h-6" />
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
@@ -85,22 +99,28 @@ export function Header() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3 }}
           className="md:hidden border-t border-border bg-background/95 backdrop-blur-xl"
         >
-          <div className="px-6 py-8 flex flex-col gap-6">
+          <div className="container-portfolio py-6 flex flex-col gap-5">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-                className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                onClick={closeMenu}
+                className="text-lg font-medium text-foreground hover:text-primary transition-colors py-2"
               >
                 {item.label}
               </a>
             ))}
             
-            <Button asChild className="mt-4 bg-primary">
+            <Button 
+              asChild 
+              className="mt-4 w-full bg-primary hover:bg-primary-hover"
+              onClick={closeMenu}
+            >
               <a href={portfolioData.personalInfo.calendlyUrl} target="_blank" rel="noopener noreferrer">
+                <Calendar className="w-4 h-4 mr-2" />
                 Prendre un appel
               </a>
             </Button>

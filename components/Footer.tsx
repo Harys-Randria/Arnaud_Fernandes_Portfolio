@@ -28,18 +28,18 @@ export function Footer() {
       url: "https://www.malt.fr/profile/arnaudfernandes",
       icon: "/malt.png",
       iconType: "image",
-      needsInvert: true // Logo sombre à inverser
+      needsInvert: true 
     },
     {
       name: "Collective",
       url: "https://www.collective.work/profile/arnaud-fernandes",
       icon: "/collective.png",
       iconType: "image",
-      needsInvert: true // Logo sombre à inverser
+      needsInvert: true 
     },
     {
       name: "Site web",
-      url: "https://arnaudfernandes.com",
+      url: "https://www.tech-magister.com/",
       icon: "globe",
       iconType: "lucide"
     }
