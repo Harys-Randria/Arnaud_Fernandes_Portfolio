@@ -2,7 +2,7 @@ export const portfolioData = {
   personalInfo: {
     name: "Arnaud Fernandés",
     title: "Leader Technique Fullstack",
-    subtitle: "Architecture microservices · .NET 8 · Go · Node.js",
+    subtitle: "Architecture microservices · .NET 10 · Go · Node.js",
     email: "arnaud.fernandes@tech-magister.com",
     phone: "+33 9 72 66 31 88",
     location: "France",
@@ -29,7 +29,7 @@ export const portfolioData = {
       {
         name: "Backend",
         skills: [
-          "C# .NET 8",
+          "C# .NET 10",
           ".NET Core 3.1 / 5 / 6 / 7",
           ".NET 4.8",
           "Node.js",
