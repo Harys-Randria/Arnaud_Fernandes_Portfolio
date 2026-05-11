@@ -7,7 +7,7 @@ export const portfolioData = {
     phone: "+33 9 72 66 31 88",
     location: "France",
     website: "https://arnaudfernandes.com",
-    calendlyUrl: "https://calendly.com/arnaud-fernandes",
+    calendlyUrl: "https://cal.com/arnaudfernandes",
   },
 
   about: {
