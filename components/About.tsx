@@ -16,7 +16,7 @@ export function About() {
   return (
     <section id="about" className="section">
       <div className="container-portfolio">
-        {/* Header avec animation */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export function About() {
             </div>
           </motion.div>
 
-          {/* Colonne droite - Points forts en carte moderne */}
+          {/* Colonne droite - Points forts */}
           <motion.div 
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -111,7 +111,7 @@ export function About() {
                   ))}
                 </ul>
 
-                {/* Ligne de séparation décorative */}
+                {/* Ligne de séparation */}
                 <div className="mt-8 pt-6 border-t border-primary/10">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-muted-foreground">Secteurs d'expérience</span>

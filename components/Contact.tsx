@@ -71,7 +71,7 @@ export function Contact() {
             transition={{ duration: 0.6 }}
           >
             <div className="card p-8 lg:p-10 h-full relative overflow-hidden group">
-              {/* Glow effect subtil */}
+              {/* Glow effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-transparent to-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
               
               <div className="relative">
